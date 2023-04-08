@@ -40,8 +40,8 @@ CREATE TABLE `cat` (
 --
 
 INSERT INTO `cat` (`id`, `cat`, `description`, `price`, `img`) VALUES
-(1, 'Default', '<b>Minecraft</b> лицензия <b>без</b> доступа к почте. После оплаты вам предоставляется логин и пароль от <b>Mojang</b> аккаунта. Магазин <b>несет</b> ответственность, в случае кражи аккаунта мы предоставим вам другой аккаунт из этой категории', 149, 'default.jpg'),
-(2, 'Premium', '<b>Minecraft</b> лицензия с доступом к почте. После оплаты вам предоставляется логин, пароль, и доступ к электронной почте от <b>Mojang</b> аккаунта. Магазин <b>несет</b> ответственность, в случае кражи аккаунта мы предоставим вам другой аккаунт из этой категории ', 249, 'premium.png');
+(1, 'Default', 'test category', 149, 'default.jpg'),
+(2, 'Premium', 'test category', 249, 'premium.png');
 
 -- --------------------------------------------------------
 
@@ -79,14 +79,6 @@ CREATE TABLE `items` (
   `status` varchar(50) NOT NULL DEFAULT 'in stock'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Дамп данных таблицы `items`
---
-
-INSERT INTO `items` (`id`, `cat`, `email`, `email_password`, `login`, `password`, `status`) VALUES
-(2, 'Premium', 'example@test.com', '1234554321', 'nestorMAGIC', 'Leopold2008_', 'completed'),
-(3, 'Default', NULL, NULL, 'Nestor2008', 'leopold29052008', 'in proccess'),
-(4, 'Premium', 'nestor-davydkin@mail.ru', 'jkfjdlsLKDSJF;sdfjewdf.dsf', 'Herobrine', 'nestor2008', 'in stock');
 
 -- --------------------------------------------------------
 
@@ -106,13 +98,6 @@ CREATE TABLE `orders` (
   `lifetime` bigint(255) NOT NULL DEFAULT 15
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Дамп данных таблицы `orders`
---
-
-INSERT INTO `orders` (`id`, `order_id`, `user_id`, `item_id`, `price`, `oldprice`, `status`, `item_cat`, `lifetime`) VALUES
-(124, 811830319, 811801332, 3, 112, 149, 'in proccess', 'Default', 1680439327),
-(125, 811843677, 811801332, 2, 187, 249, 'completed', 'Premium', 1680445846);
 
 -- --------------------------------------------------------
 
