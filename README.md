@@ -1,2 +1,2 @@
 # ShulkerStore
-Telegram bot created on Python (aiogram)
+Telegram shop bot created on Python (aiogram)
